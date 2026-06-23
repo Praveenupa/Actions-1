@@ -1,0 +1,22 @@
+name: Install HTTPD Server
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v7
+
+      - name: Install httpd
+        run: |
+          sudo apt update
+          sudo apt install httpd -y
+
+      - name: Write into index.html
+        run: echo "Hello world" > /var/www/html/index.html   
+
+      - name: List Repo 
+        run: ls -ltra

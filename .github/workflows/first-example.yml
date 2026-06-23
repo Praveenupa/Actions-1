@@ -11,10 +11,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Welcome message
-        run: echo "My First GitHub Action Jobs"
+        run: |
+          echo "My First GitHub Action Jobs"
+          ls -ltra
+          cat README.md
 
-      - name: List Files
-        run: ls
+    # - name: List Files
+    #  run: ls
 
-      - name: Read Files
-        run: cat README.md
+    #  - name: Read Files
+    #    run: cat README.md
