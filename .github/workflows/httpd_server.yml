@@ -15,5 +15,5 @@ jobs:
 
       - name: Execute Shell Script
         run: |
-          chmod +x ./server.sh
-          ./server.sh 
+          chmod +x .github/workflows/server.sh
+          .github/workflows/server.sh 
