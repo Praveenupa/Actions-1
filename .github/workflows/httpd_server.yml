@@ -15,5 +15,5 @@ jobs:
 
       - name: Execute Shell Script
         run: |
-          chmod +x server.sh
+          chmod +x ./server.sh
           ./server.sh 
