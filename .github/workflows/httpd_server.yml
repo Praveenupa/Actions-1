@@ -3,20 +3,16 @@ name: Install HTTPD Server
 on: push
 
 jobs:
-  first_job:
+  Install Apache2:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v7
 
-      - name: Install httpd
-        run: |
-          sudo apt-get update
-          sudo apt-get  install apache2 -y
-
-      - name: Write into index.html
-        run: echo "Hello world" | sudo tee /var/www/html/index.html   
-
       - name: List Repo 
         run: ls -ltra
+      - name: Execute Shell Script
+        run: |
+        chmod +x server.sh   
+        ./server.sh  
