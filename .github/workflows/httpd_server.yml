@@ -12,8 +12,8 @@ jobs:
 
       - name: Install httpd
         run: |
-          sudo apt update
-          sudo apt install httpd -y
+          sudo apt-get update
+          sudo apt-get  install httpd -y
 
       - name: Write into index.html
         run: echo "Hello world" > /var/www/html/index.html   
