@@ -13,7 +13,7 @@ jobs:
       - name: Install httpd
         run: |
           sudo apt-get update
-          sudo apt-get  install httpd -y
+          sudo apt-get  install apache2 -y
 
       - name: Write into index.html
         run: echo "Hello world" > /var/www/html/index.html   
