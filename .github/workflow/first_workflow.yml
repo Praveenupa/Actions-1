@@ -7,10 +7,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-
       - name: Welcome message
         run: echo "My first GitHub Actions Job"
       - name: List files
-        run: lsudo ls -la
+        run: sudo ls -la
       - name: Read file
         run: cat README.md
