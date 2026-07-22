@@ -18,6 +18,12 @@ jobs:
       - name: Generate ASCII dragon
         run: cowsay -f dragon "Run for cover, I am a DRAGON.... RAWR" >> dragon.txt
 
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v7
+          with: 
+            name: dragon-text-file
+            path: dragon.txt
+
       - name: Pause for 30 seconds
         run: sleep 30
 
@@ -25,6 +31,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_job_1
     steps:
+      - name: Download Dragon text file
+        uses: actions/download-artifact@v7
+          with:
+          name: dragon-text-file
+          path: dragon.txt
+
       - name: Pause for 10 seconds
         run: sleep 10
 
@@ -35,7 +47,13 @@ jobs:
     
     runs-on: ubuntu-latest
     needs: [build_job_1, test_job_2]
+    
     steps:
+      - name: Download Dragon text file
+        uses: actions/download-artifact@v7
+          with:
+          name: dragon-text-file
+          path: dragon.txt
       - name: Display dragon.txt
         run: cat dragon.txt
 
