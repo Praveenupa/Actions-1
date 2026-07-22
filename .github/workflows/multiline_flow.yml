@@ -1,3 +1,6 @@
+name: Bash Script
+on: push
+
 jobs:
   ascii_job:
     runs-on: ubuntu-latest
