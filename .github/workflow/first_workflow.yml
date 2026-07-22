@@ -11,6 +11,6 @@ jobs:
       - name: Welcome message
         run: echo "My first GitHub Actions Job"
       - name: List files
-        run: ls
+        run: lsudo ls -la
       - name: Read file
         run: cat README.md
