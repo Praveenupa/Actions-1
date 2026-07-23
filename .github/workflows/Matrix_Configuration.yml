@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  timeout-minutes: 2
   deploy:
     strategy:
       matrix:
