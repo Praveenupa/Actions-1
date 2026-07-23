@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  timeout-minutes: 2
   deploy:
+    timeout-minutes: 2
     strategy:
       matrix:
         os: [ubuntu-latest, ubuntu-20.04, windows-latest]
